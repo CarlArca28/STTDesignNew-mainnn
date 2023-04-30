@@ -1,0 +1,224 @@
+/*//////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+/* COLOR PALLET */
+/* 
+#14365C - DARKBLUE  
+#F1FA39 - YELLOW
+#E31717 - RED
+#99998D - GRAY
+#1EA8E8 - light blue
+#0E2747 - DARKBLUE */
+
+/*//////////////////////////////////////////////////////////*/
+
+/* HTML,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #1ea8e8;
+} */
+body {
+  background: linear-gradient(-90deg, #112d4e, #2f72af, #dbe2ef, #f9f7f7);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+textarea {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+  width: 100%;
+  border-radius: 10px;
+  height: 383px;
+  resize: none;
+  padding: 10px;
+  border: solid 2px rgb(50, 50, 50);
+  font-size: clamp(2rem, 50%, 3rem);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background: #664aff;
+}
+.search-box {
+  /* position: relative; */
+  height: 50px;
+  width: 52px;
+  /* right: 0; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: fixed;
+  text-align: right;
+  top: 25px;
+  right: 50px;
+}
+.search-box.active {
+  width: 350px;
+  position: fixed;
+  text-align: right;
+  top: 25px;
+  right: 50px;
+}
+.search-box input {
+  width: 95%;
+  margin-top: 4px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 80%;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  padding: 0 48px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active {
+  opacity: 1;
+}
+.search-box input::placeholder {
+  color: #a6a6a6;
+}
+.search-box .search-icon {
+  position: absolute;
+  right: 5px;
+  top: 47%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 41px;
+  font-size: 20px;
+  color: #e31717;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.search-box .search-icon.active {
+  right: -1px;
+  height: 40px;
+  line-height: 42px;
+  width: 40px;
+  font-size: 26px;
+  background: #e31717;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active {
+  display: none;
+}
+
+/* This is the CSS code for the loading screen */
+#loading-screen {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-90deg, #112d4e, #2f72af, #dbe2ef, #f9f7f7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+ 
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, #e31717, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+
+/* PUT YOUR CODES BELOW */
